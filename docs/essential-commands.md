@@ -86,7 +86,7 @@ total 4
 lrwxrwxrwx 1 punpa punpa    5 Aug 10 01:40 file2 -> file1
 ```
 
-# file permisssions
+# File permissions
 
 > `-rwxrw-rwx`
 
