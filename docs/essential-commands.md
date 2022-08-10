@@ -295,12 +295,19 @@ temp/file2.txt
 $ find temp/ -type f -perm /o=x
 temp/file1.txt
 
-$ find file with size 7 bytes
+# find file with size 7 bytes
 $ find temp/ -type f -size 7c
 temp/file1.txt
 
-$ find file with size 5-10 bytes
+# find file with size 5-10 bytes
 $ find temp/ -type f -size +5c -size -10c
 temp/file1.txt
+
+# find and execute command
+# '{}' gets substitute with find result
+# starts with -exec, end with \;
+$ find temp/ -type f -name "file*" -exec ls -l '{}' \;
+-rwxr-xr-x 1 root root 7 Aug 10 23:10 temp/file1.txt
+-rw-r--rw- 1 root root 0 Aug 10 22:55 temp/file2.txt
 ```
 
